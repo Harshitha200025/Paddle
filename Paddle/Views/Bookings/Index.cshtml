@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Paddle.Models.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.court_id.c_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer_id.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_of_hrs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.court_id.c_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_id.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_of_hrs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Book_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Book_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Book_id })
+        </td>
+    </tr>
+}
+
+</table>

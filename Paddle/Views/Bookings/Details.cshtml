@@ -1,0 +1,58 @@
+﻿@model Paddle.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.court_id.c_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.court_id.c_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_id.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_id.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.no_of_hrs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.no_of_hrs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Book_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
